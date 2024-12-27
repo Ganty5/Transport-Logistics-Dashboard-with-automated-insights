@@ -9,9 +9,13 @@ During the preprocessing using python,
 I took the action of converting the date columns (Timestamp, Shipped date, Delivery Date) into a consistent ISO format (YYYY-MM-DD HH:MM:SS) to ensure compatibility with Power BI.
 I afterwards saved the processed data as a CSV file for seamless import into Power BI. I ensured the dataset is clean and ready for analysis by handling potential parsing errors or inconsistent data formats.
 
+In this project, missing values in the Delivery Date column are intentionally left unaltered to accurately represent pending deliveries. These missing values indicate orders that are either:
+- Still in transit and yet to be delivered.
+- Awaiting shipment or processing.
+By preserving these missing values, my intended dashboard can highlight Operational Insights: The "Total Pending" metric dynamically counts and visualizes all orders without a delivery date, giving a clear view of incomplete or ongoing shipments, can also maintain Data Integrity by Altering missing delivery dates could misrepresent actual operations, such as showing pending orders as completed, thereby distorting delivery performance metrics and finally Support Trend Analysis, by naturally exclude pending orders from metrics like "Average Delivery Duration," ensuring that only completed deliveries contribute to these trends.
+
 Next action was creating my Power BI Dashboard
 This was basically to create a dynamic, user-friendly dashboard to visualize transport logistics key metrics needed to be known and for enhancing insights and decision-making.
-
 
 **Some of the key metrics captured in the dashbiard includes;**
 Total Distance Traveled
